@@ -1,0 +1,6 @@
+{
+    "SecretName": "PolarisCredentials",
+    "SLADomainName": "Demo-Mabel-Backup",
+    "EC2InstanceId": "i-0e57b68ca02d8d21e",
+    "AWSAccountId": "918151337590"
+}

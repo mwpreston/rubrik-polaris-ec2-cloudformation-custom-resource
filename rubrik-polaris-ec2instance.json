@@ -1,0 +1,70 @@
+{
+    "typeName": "Rubrik::Polaris::EC2Instance",
+    "description": "A resource to manage EC2 Instances protected by Rubrik on Rubrik Polaris",
+    "sourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+    "properties": {
+        "ID": {
+            "description": "ID is automatically generated within Rubrik Polaris",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "EC2InstanceId": {
+            "description": "ID of the EC2 Instance (AWS)",
+            "type": "string"
+        },
+        "SLADomainName": {
+            "description": "Name of the Rubrik SLA Domain",
+            "type": "string"
+        },
+        "AWSAccountId": {
+            "description": "Account ID of current AWS Account",
+            "type": "string"
+        },
+        "SecretName": {
+            "description": "Name of secret containing polaris domain and credentials",
+            "type": "string"
+        },
+        "Content": {
+            "description": "Variable content",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 250
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+    ],
+    "readOnlyProperties": [
+        "/properties/ID",
+        "/properties/Content",
+        "/properties/SecretName"
+    ],
+    "primaryIdentifier": [
+        "/properties/ID",
+        "/properties/SecretName"
+
+    ],
+    "handlers": {
+        "create": {
+            "permissions": [
+                "secretsmanager:*"
+            ]
+        },
+        "read": {
+            "permissions": [
+                "cloudformation:DescribeStackResource",
+                "secretsmanager:*"
+            ]
+        },
+        "update": {
+            "permissions": [
+                "secretsmanager:*"
+            ]
+        },
+        "delete": {
+            "permissions": [
+                "secretsmanager:*"
+            ]
+        }
+    }
+}
