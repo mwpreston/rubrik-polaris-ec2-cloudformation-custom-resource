@@ -1,4 +1,4 @@
-# Third-party CloudFormation resource for Rubrik Polaris EC2 Protection
+# TThird-party CloudFormation resource for Rubrik Polaris EC2 Protection
 
 A CloudFormation custom resource type for managing EC2 workloads within Polaris
 
