@@ -2,7 +2,7 @@
 
 A CloudFormation custom resource type for managing EC2 workloads within Polaris
 
-# Introduction
+# Introductionn
 
 The `Rubrik::Polaris::EC2Instance` is a CloudFormation resource type created in order to allow users to modify the SLA Domains assigned to EC2 instances within Rubrik Polaris.
 
